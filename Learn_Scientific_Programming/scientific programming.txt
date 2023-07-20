@@ -1,0 +1,87 @@
+## Freecodecamp.org Scientific Programming with Python##
+
+#01. Why Programming
+itu adalah bagaimana cara kita, dan persfektif kita bahwa, kita dapat memanfaatkan programming sebagai alat untuk memecahkan persoalan kita. dan juga kita sebagai programmer, dapat menjadi bagian dari pada program itu sendiri, bagaimanapun kita membuat program agar bisa bermanfaat bagi orang lain. kita dapat menjadi jembatan antara komputer dan end user (Pengguna akhir).
+
+#02. Hardware Architecture
+adalah bagaimana program berjalan pada komputer, input program yang masuk akan di proses oleh CPU (atau central processing unit) dan program yang berjalan akan di simpan di RAM (atau Main Memory), untuk text, gambar dan file akan di simpan di Hard disk ( atau Secondary Memory), untuk komputer atau PC biasanya semua itu ada di mother board, dimana mother board memiliki slot untuk CPPU, RAM dan Hard disk.
+
+#03. Python as a Language
+pembuat python namanya guido van rossum, dan untuk penggemarnya namanya pythonista. pak guido ingin kita mempelajari bahasa pemrograman yang powerfull akan tetapi menyenangkan.
+
+#04 Elements of python
+** kamu nggak bisa menggunakan Reserved Words (Kata yang sudah python siapkan) sebagai nama variabel atau identifier
+** python sequence, pemograman yang dijalankan berurutan
+** python repeated, mengulang (looping) blok program menggunakan while dan for
+** python conditional, percabangan pemrograman menggunakan if
+
+#05. Variable, Exspression, and statement
+** conditional branching di python sedikit berbeda dengan bahasa pemrograman lain, pada pengkondisian if tidak memakai tanda buka kurung, dan statement nya harus ada tab
+
+#06. conditional structure
+** jika di python untuk pengkondisian elseif itu syntaxnya adalah "elif". 
+** menggunakan try dan except untuk mencegah kode berhenti ditengah jalan, ketika ada kode yang error. sehingga kode setelahnya tidak bisa terbaca dikarenakan error di baris sebelumnya. dengan menggunakan try dan except kita dapat mencegah program kita berhenti karena error.
+
+#07 Python function
+** gunakan keyword def() untuk mendefinisikan function di Python
+
+#08 building our own function
+** kita bisa menggunakan def() untuk membuat function, dan return value
+   contoh : def makan():
+                  return "makan ayam"
+   ketika kita menggunakan perintah print(makan()), maka akan keluar output "makan ayam"
+** pada fungsi yang kita definisikan, kita juga bisa menambahkan parameter.
+   contoh : def makan(lauk):
+                  return "makan " + lauk
+            print(makan('soto'))
+   dan ketika di jalankan akan mengeluarkan output sesuai dengan parameter yang di input
+** kamu juga bisa menambahkan lebih dari satu parameter pada function
+
+#09 looping and iteration
+** looping atau perulangan didalam python menggunakan while, ada beberapa macam pengulangan. salah satunya adalah looping zero trip, mereka melakukan looping tetapi tidak mengulang apapun. berbanding dengan looping infinite yang akan mengulang terus menerus
+** break loop adalah mengakhirkan loop yang sedang berlangsung apabila kondisi terpenuhi.
+** loop while digunakan untuk hal hal yang tidak pasti atau indefinite loop
+
+#10 Definite Loop (Loop pasti)
+** menggunakan for dan biasanya me-looping array
+** python bisa menggunakan is untuk menggantikan operator == dan is lebih kuat dibandingkan ==
+** gunakan is hanya pada kasus True False dan None, jangan pernah gunakan is pada integer float dan string
+
+11. String in Python
+** untuk mengetahui panjang dari string kita bisa menggunakan built-in function len()
+
+12. Intermediate String
+** gunakan [a:b] untuk mencetak string tertentu, potongan string tertentu.
+** a digunakan sebagai initiate, dan b digunakan sebagai stopper
+** concatination dalam string mennggunakan +
+** dalam python juga kita bisa menggunakan sting sebagai logical operator menggunakan keyword in
+** untuk string kita bisa menggunakan library lower() function untuk membuat semua huruf besar menjadi kecil
+** kita juga bisa melakukan search and replace dalam string, sebagai contoh kita dapat menimpa huruf atau kata dalam python menggunakan method replace()
+** untuk menghapus whitespace kita bisa menggunakan strip() untuk menghapus whitespace di kedua sisi, lstrip() untuk sebelah kiri, rstrip() untuk disebelah kanan
+** gunakan find() untuk menemukan posisi dari pada huruf yang kita cari
+
+13. Reading Files
+** new line use \n
+** itu tetap dihitung satu karakter
+
+14.  Files as a sequence
+** mengulang string
+
+15. Python list
+** list dalam python sama dengan array dalam javascript
+** List dalam python biasanya di tandai dengan []
+** list dapat menyimpan apapun, bahkan list dapat menyimpan list
+** untuk membuat list dapat menggunakan list construktor list()
+
+16. add variable into list
+** untuk menambahkan variabel ke dalam list dapat menggunakan append(), variable akan otomatis di tambahkan di akhir list
+** untuk menambahkan list di awal atau di tengah dapat menggunakan insert(0,'nama variabel'), parameter pertama untuk index dalam list, parameter kedua untuk isinya
+** To append elements from another list to the current list, use the extend() method.
+
+17. List Comprehension
+List comprehension bisa membuat syntax lebih pendek, dengan fungsi yang sama
+
+18. Dictionarys
+** dictionary selalu mempunyai key dan value
+** itu bertindak seperti kita meletakkan barang di dalam tas, dan masing masing barang mempunyai identitasnya sendiri.
+** key : value itu adalah struktur dari dictionary
