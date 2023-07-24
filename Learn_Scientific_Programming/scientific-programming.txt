@@ -85,3 +85,5 @@ List comprehension bisa membuat syntax lebih pendek, dengan fungsi yang sama
 ** dictionary selalu mempunyai key dan value
 ** itu bertindak seperti kita meletakkan barang di dalam tas, dan masing masing barang mempunyai identitasnya sendiri.
 ** key : value itu adalah struktur dari dictionary
+** salah satu permasalahan menggunakan dictionary adalah kita tidak tahu key apa saja yang ada di dalam  dictionary, untuk itu kita dapat menggunakan perulangan atau pengkondisian statement. contohnya : if name in jumlah_akhir : x = print(jumlah_akhir) else: x = 0
+** atau kita dapat menggunakan fungsi jumlah_akhir.get(name,0)

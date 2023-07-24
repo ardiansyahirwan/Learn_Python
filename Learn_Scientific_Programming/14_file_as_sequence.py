@@ -9,5 +9,4 @@ file_x = open(file='14_text_to_open.txt')
 # Read a whole file
 # Count char in file_x
 inp = file_x.read()
-print(len(inp))
-print(inp[0:20])
+print(inp)
