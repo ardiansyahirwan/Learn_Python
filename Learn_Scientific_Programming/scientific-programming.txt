@@ -87,3 +87,71 @@ List comprehension bisa membuat syntax lebih pendek, dengan fungsi yang sama
 ** key : value itu adalah struktur dari dictionary
 ** salah satu permasalahan menggunakan dictionary adalah kita tidak tahu key apa saja yang ada di dalam  dictionary, untuk itu kita dapat menggunakan perulangan atau pengkondisian statement. contohnya : if name in jumlah_akhir : x = print(jumlah_akhir) else: x = 0
 ** atau kita dapat menggunakan fungsi jumlah_akhir.get(name,0)
+
+19. Tuple
+** tuples sama dengan list, mereka mempunyai index, akan tetapi tuples itu immutable (atau tidak bisa di ubah nilainya)
+
+20. RegEx
+** RegEx Patterns
+Tentu! Berikut terjemahan dari teks di atas:
+
+**Pola Reguler (Regex)**:
+Pola Reguler (Regex) adalah urutan karakter yang digunakan untuk mendefinisikan pola pencarian. Mereka memberikan cara yang kuat dan fleksibel untuk mencocokkan, mencari, dan memanipulasi string berdasarkan aturan dan pola tertentu.
+
+Berikut beberapa simbol dan metakarakter yang umum digunakan dalam pola Regex:
+
+**Karakter Literal**:
+   Setiap karakter non-spesial dalam pola Regex akan cocok dengan karakter itu sendiri dalam teks input.
+
+   Contoh: `python` cocok dengan kata "python" dalam teks input.
+
+**Metakarakter**:
+   Metakarakter adalah karakter khusus dengan arti yang telah ditentukan dalam pola Regex. Untuk menggunakan mereka sebagai karakter literal, Anda perlu menambahkan karakter escape (\) sebelumnya.
+
+   Metakarakter umum:
+   - `.`: Cocok dengan semua karakter kecuali newline.
+   - `^`: Cocok dengan awal string.
+   - `$`: Cocok dengan akhir string.
+   - `*`: Cocok dengan nol atau lebih kemunculan karakter sebelumnya.
+   - `+`: Cocok dengan satu atau lebih kemunculan karakter sebelumnya.
+   - `?`: Cocok dengan nol atau satu kemunculan karakter sebelumnya.
+   - `[]`: Cocok dengan salah satu karakter di dalam tanda kurung siku.
+   - `|`: Berfungsi sebagai operator OR untuk mencocokkan salah satu ekspresi di sebelah kiri atau kanan.
+   - `()`: Mengelompokkan karakter bersama.
+
+**Kuantifikasi**:
+   Kuantifikasi menentukan jumlah kemunculan karakter atau kelompok sebelumnya yang cocok.
+
+   Kuantifikasi umum:
+   - `*`: Cocok dengan nol atau lebih kemunculan.
+   - `+`: Cocok dengan satu atau lebih kemunculan.
+   - `?`: Cocok dengan nol atau satu kemunculan.
+   - `{n}`: Cocok dengan tepat `n` kemunculan.
+   - `{n,}`: Cocok dengan `n` atau lebih kemunculan.
+   - `{n, m}`: Cocok dengan antara `n` dan `m` kemunculan.
+
+**Kelas Karakter**:
+   Kelas karakter memungkinkan Anda mencocokkan kelompok karakter tertentu.
+
+   Kelas karakter umum:
+   - `\d`: Cocok dengan angka apa pun (0-9).
+   - `\D`: Cocok dengan karakter non-angka.
+   - `\w`: Cocok dengan karakter kata (huruf, angka, garis bawah).
+   - `\W`: Cocok dengan karakter non-kata.
+   - `\s`: Cocok dengan karakter spasi (spasi, tab, newline).
+   - `\S`: Cocok dengan karakter non-spasi.
+
+**Penanda**:
+   Penanda digunakan untuk mencocokkan posisi dalam string daripada karakter spesifik.
+
+   Penanda umum:
+   - `^`: Cocok dengan awal string.
+   - `$`: Cocok dengan akhir string.
+   - `\b`: Cocok dengan batas kata.
+
+Ini adalah contoh sederhana penggunaan pola Regex di Python.
+
+** 21 Networking with Python
+   Dalam Python, "networking" mengacu pada proses pembuatan, pengelolaan, dan interaksi dengan jaringan komputer. Python menyediakan beberapa pustaka dan modul bawaan yang membuat tugas-tugas jaringan menjadi lebih mudah diakses.
+
+   Salah satu pustaka utama untuk networking di Python adalah modul "socket". Modul socket memungkinkan Anda untuk bekerja dengan soket, yang merupakan titik akhir yang digunakan untuk komunikasi antara dua komputer melalui jaringan.
