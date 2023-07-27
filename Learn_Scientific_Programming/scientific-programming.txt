@@ -154,4 +154,47 @@ Ini adalah contoh sederhana penggunaan pola Regex di Python.
 ** 21 Networking with Python
    Dalam Python, "networking" mengacu pada proses pembuatan, pengelolaan, dan interaksi dengan jaringan komputer. Python menyediakan beberapa pustaka dan modul bawaan yang membuat tugas-tugas jaringan menjadi lebih mudah diakses.
 
-   Salah satu pustaka utama untuk networking di Python adalah modul "socket". Modul socket memungkinkan Anda untuk bekerja dengan soket, yang merupakan titik akhir yang digunakan untuk komunikasi antara dua komputer melalui jaringan.
+   cd Salah satu pustaka utama untuk networking di Python adalah modul "socket". Modul socket memungkinkan Anda untuk bekerja dengan soket, yang merupakan titik akhir yang digunakan untuk komunikasi antara dua komputer melalui jaringan.
+
+   Dalam Python, "socket" adalah sebuah pustaka bawaan yang menyediakan sekumpulan alat untuk bekerja dengan komunikasi jaringan. Pustaka socket memungkinkan Anda untuk membuat koneksi jaringan, mengirim dan menerima data melalui jaringan, serta membentuk berbagai jenis komunikasi jaringan, seperti interaksi klien-server.
+
+   Dengan socket di Python, Anda dapat mengimplementasikan aplikasi klien dan server untuk berbagai protokol jaringan seperti TCP (Transmission Control Protocol) dan UDP (User Datagram Protocol). Berikut adalah gambaran singkat tentang konsep dan fungsi utama dari pustaka socket:
+
+   Jenis Socket:
+
+   SOCK_STREAM: Digunakan untuk koneksi TCP, yang menyediakan aliran data yang dapat diandalkan dan terurut.
+   SOCK_DGRAM: Digunakan untuk koneksi UDP, yang menyediakan komunikasi cepat tanpa koneksi.
+   Metode Dasar Socket:
+
+   socket(): Membuat objek socket baru.
+   bind(): Mengikat socket ke alamat IP dan port tertentu.
+   listen(): Menempatkan socket ke mode mendengarkan, memungkinkannya menerima koneksi.
+   accept(): Menerima koneksi masuk, menghasilkan objek socket baru untuk berkomunikasi dengan klien.
+   connect(): Memulai koneksi ke server (untuk klien).
+   send(): Mengirim data melalui socket.
+   recv(): Menerima data dari socket.
+   Alur Kerja Socket untuk Sisi Server:
+
+   Membuat objek socket menggunakan socket.socket().
+   Mengikat socket ke alamat dan port tertentu menggunakan bind().
+   Menempatkan socket dalam mode mendengarkan dengan listen().
+   Menerima koneksi masuk menggunakan accept() (ini akan menciptakan objek socket baru untuk berkomunikasi dengan klien).
+   Mengirim dan menerima data dengan klien menggunakan socket baru.
+   Alur Kerja Socket untuk Sisi Klien:
+
+   Membuat objek socket menggunakan socket.socket().
+   Menghubungkan ke alamat dan port server menggunakan connect().
+   Mengirim dan menerima data dengan server menggunakan socket.
+
+   ** urllib
+   In this example, urllib.request is used to make an HTTP GET request to the URL 'https://www.example.com'. The response is then read and stored in html_content, which contains the HTML content of the web page.
+
+And now, let's translate the explanation to Bahasa Indonesia:
+
+Dalam Python, urllib adalah modul yang menyediakan serangkaian fungsi untuk bekerja dengan URL (Uniform Resource Locators). Modul ini digunakan untuk berbagai tugas terkait pengambilan data dari web, melakukan permintaan HTTP, dan berinteraksi dengan sumber daya web.
+
+Modul urllib merupakan bagian dari Pustaka Standar Python, sehingga sudah terpasang bersama Python, dan Anda tidak perlu menginstal pustaka eksternal apa pun untuk menggunakannya.
+
+Modul urllib berisi beberapa submodul, seperti urllib.request, urllib.parse, urllib.error, urllib.robotparser, dan urllib.response. Submodul-submodul ini menawarkan berbagai fungsi untuk menangani berbagai aspek dalam bekerja dengan URL dan sumber daya web.
+
+Beberapa contoh penggunaan umum dari urllib termasuk mengambil halaman web, mengunduh file, melakukan permintaan HTTP GET dan POST, memparsing URL, serta menangani kesalahan terkait pengambilan URL.
