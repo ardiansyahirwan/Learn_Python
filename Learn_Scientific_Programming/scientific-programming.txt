@@ -189,12 +189,88 @@ Ini adalah contoh sederhana penggunaan pola Regex di Python.
    ** urllib
    In this example, urllib.request is used to make an HTTP GET request to the URL 'https://www.example.com'. The response is then read and stored in html_content, which contains the HTML content of the web page.
 
-And now, let's translate the explanation to Bahasa Indonesia:
+   Dalam Python, urllib adalah modul yang menyediakan serangkaian fungsi untuk bekerja dengan URL (Uniform Resource Locators). Modul ini digunakan untuk berbagai tugas terkait pengambilan data dari web, melakukan permintaan HTTP, dan berinteraksi dengan sumber daya web.
 
-Dalam Python, urllib adalah modul yang menyediakan serangkaian fungsi untuk bekerja dengan URL (Uniform Resource Locators). Modul ini digunakan untuk berbagai tugas terkait pengambilan data dari web, melakukan permintaan HTTP, dan berinteraksi dengan sumber daya web.
+   Modul urllib merupakan bagian dari Pustaka Standar Python, sehingga sudah terpasang bersama Python, dan Anda tidak perlu menginstal pustaka eksternal apa pun untuk menggunakannya.
 
-Modul urllib merupakan bagian dari Pustaka Standar Python, sehingga sudah terpasang bersama Python, dan Anda tidak perlu menginstal pustaka eksternal apa pun untuk menggunakannya.
+   Modul urllib berisi beberapa submodul, seperti urllib.request, urllib.parse, urllib.error, urllib.robotparser, dan urllib.response. Submodul-submodul ini menawarkan berbagai fungsi untuk menangani berbagai aspek dalam bekerja dengan URL dan sumber daya web.
 
-Modul urllib berisi beberapa submodul, seperti urllib.request, urllib.parse, urllib.error, urllib.robotparser, dan urllib.response. Submodul-submodul ini menawarkan berbagai fungsi untuk menangani berbagai aspek dalam bekerja dengan URL dan sumber daya web.
+   Beberapa contoh penggunaan umum dari urllib termasuk mengambil halaman web, mengunduh file, melakukan permintaan HTTP GET dan POST, memparsing URL, serta menangani kesalahan terkait pengambilan URL.
+** 22. Web Service in python
+   ** XML Schema
+   "XML Schema, juga dikenal sebagai Definisi Skema XML (XSD), adalah cara untuk mendefinisikan struktur, konten, dan tipe data dari dokumen XML. Ini menyediakan kumpulan aturan dan batasan yang harus dipenuhi oleh dokumen XML agar dianggap sah sesuai dengan skema. XML Schema ditulis dalam format XML itu sendiri dan berfungsi sebagai cetak biru atau kontrak untuk memvalidasi data XML.
+   Schema biasanya digunakan untuk :
+   ** validasi
+   ** Dokumentasi
+   ** pemetaan data
 
-Beberapa contoh penggunaan umum dari urllib termasuk mengambil halaman web, mengunduh file, melakukan permintaan HTTP GET dan POST, memparsing URL, serta menangani kesalahan terkait pengambilan URL.
+   contoh :
+   <!-- Contoh XML Schema untuk mendefinisikan sebuah buku -->
+   <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+   <xs:element name="buku">
+      <xs:complexType>
+         <xs:sequence>
+         <xs:element name="judul" type="xs:string"/>
+         <xs:element name="penulis" type="xs:string"/>
+         <xs:element name="tahun" type="xs:int"/>
+         </xs:sequence>
+      </xs:complexType>
+   </xs:element>
+
+   </xs:schema>
+
+   Pada contoh ini:
+
+   Kami mendefinisikan sebuah XML Schema dengan namespace target (xmlns:xs="http://www.w3.org/2001/XMLSchema").
+
+   Kami mendefinisikan elemen bernama buku, yang berisi tiga elemen anak: judul, penulis, dan tahun.
+
+   Setiap elemen anak memiliki tipe data yang ditentukan: judul dan penulis berjenis xs:string (string), dan tahun berjenis xs:int (integer).
+
+   Dengan XML Schema ini, sebuah dokumen XML harus mengikuti struktur dan tipe data yang telah ditentukan untuk dianggap sah. Misalnya:
+
+   <buku>
+    <judul>Judul Contoh</judul>
+    <penulis>John Doe</penulis>
+    <tahun>2023</tahun>
+   </buku>
+
+   biasanya pembuatan contract Shema dan File XML Schema di buat terpisah, dan nanti nya akan di hubungkan dengan import atau include.
+
+23. JSON di Python
+   ** JSON (JavaScript Object Notation) adalah format pertukaran data yang ringan dan mudah dibaca oleh manusia, serta mudah diproses dan dihasilkan oleh mesin. Di dalam bahasa Python, terdapat modul json yang menyediakan dukungan bawaan untuk bekerja dengan data JSON. Modul ini menawarkan berbagai fungsi untuk mengkodekan (serialize) objek-objek Python menjadi format JSON, serta mendekodekan (deserialize) string JSON kembali menjadi objek-objek Python.
+
+   Berikut adalah beberapa fungsi umum yang disediakan oleh modul json:
+
+   1. json.dumps(obj, *, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, default=None, sort_keys=False, **kw): Fungsi ini mengkodekan objek-objek Python (seperti dictionary atau list) menjadi string dengan format JSON.
+
+   2. json.loads(s, *, encoding=None, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw): Fungsi ini mendekodekan string JSON kembali menjadi objek-objek Python.
+
+   3. json.dump(obj, fp, *, skipkeys=False, ensure_ascii=True, check_circular=True, allow_nan=True, cls=None, indent=None, separators=None, default=None, sort_keys=False, **kw): Fungsi ini menulis objek-objek Python ke dalam sebuah file dengan format JSON.
+
+   4. json.load(fp, *, cls=None, object_hook=None, parse_float=None, parse_int=None, parse_constant=None, object_pairs_hook=None, **kw): Fungsi ini membaca data JSON dari sebuah file dan mengubahnya menjadi objek-objek Python.
+
+24. Service Oriented Approach (Pendekatan berbasis layanan)
+    adalah paradigma dalam pengembangan perangkat lunak yang fokus pada penggunaan layanan sebagai blok bangunan dasar. Dalam konteks ini, layanan mengacu pada unit fungsional yang independen, yang dapat berkomunikasi dengan sistem lain
+   Karakteristik kunci dari pendekatan berorientasi layanan (Service-Oriented Approach) adalah:
+   ** 1. Layanan Independen: Setiap layanan dalam arsitektur ini berfungsi secara independen, artinya mereka berjalan   dalam konteks terpisah satu sama lain.
+
+   ** 2. Antarmuka Terdefinisi: Setiap layanan menawarkan antarmuka yang terdefinisi dengan jelas, biasanya dalam bentuk API (Application Programming Interface). Antarmuka ini menyediakan cara bagi layanan lain untuk berkomunikasi dan berinteraksi dengan layanan tersebut.
+
+   ** 3. Pembagian Fungsionalitas: Pendekatan berorientasi layanan membagi fungsionalitas sistem menjadi sejumlah layanan independen. Ini memungkinkan pengembang untuk fokus pada pembangunan dan pemeliharaan setiap layanan secara terpisah, 
+
+   ** 4. Penggunaan Ulang (Reusable)
+
+   ** 5. Interoperabilitas: Layanan dalam pendekatan berorientasi layanan harus dapat berkomunikasi dengan sistem lain yang mungkin dibangun dengan teknologi atau bahasa pemrograman yang berbeda.
+
+   ** 6. Skalabilitas: Dalam arsitektur berorientasi layanan, Anda dapat dengan mudah meningkatkan kapasitas sistem dengan menambah atau mengurangi instance dari layanan tertentu, sehingga mendukung skalabilitas secara lebih fleksibel.
+
+25. Object Oriented Approach
+   di python ada yang namanya OOP python terdiri dari:
+   ** Class , adalah blueprint atau cetak biru dari suatu object (cetakan)
+   ** Method/Fungsi, adalah fungsi yang ada didalam Class
+   ** Atribut, yaitu variabel yang di definisikan didalam Class
+
+   OOP python mempunyai sifat Inheritance(turunan), yaitu child class dapat memakai method atau atribut dari parent class nya. Konsep Inheritance atau pewarisan sama seperti apa yang di wariskan orang tua kepada anaknya.
+   ** biasanya jika file nya terpisah dapat menggunakan sintak "from file parent import nama class parent"
