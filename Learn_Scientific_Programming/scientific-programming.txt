@@ -274,3 +274,60 @@ Ini adalah contoh sederhana penggunaan pola Regex di Python.
 
    OOP python mempunyai sifat Inheritance(turunan), yaitu child class dapat memakai method atau atribut dari parent class nya. Konsep Inheritance atau pewarisan sama seperti apa yang di wariskan orang tua kepada anaknya.
    ** biasanya jika file nya terpisah dapat menggunakan sintak "from file parent import nama class parent"
+
+26. Database di python menggunakan SQLite
+   Optimasi SQL pada SQLite mencakup langkah-langkah untuk meningkatkan performa kueri dan operasi database. Meskipun SQLite adalah basis data ringan dan sederhana, beberapa strategi optimasi tetap dapat diterapkan untuk mengoptimalkan kinerjanya. Berikut adalah beberapa tips untuk melakukan optimasi SQL di SQLite:
+
+   ** Indeks (Indexes):
+   Tambahkan indeks pada kolom-kolom yang sering digunakan dalam kondisi WHERE, ORDER BY, atau JOIN.
+   Contoh: CREATE INDEX idx_nama_kolom ON nama_tabel (nama_kolom);
+   Parameter Binding:
+
+   ** Gunakan parameter binding untuk menghindari SQL injection dan meningkatkan kinerja kueri yang dieksekusi berulang kali.
+   Contoh: SELECT * FROM nama_tabel WHERE kolom = :nilai_parameter;
+   Transaksi (Transactions):
+
+   ** Menggunakan transaksi untuk mengelompokkan beberapa perintah SQL dapat meningkatkan performa, terutama saat melakukan banyak operasi data sekaligus.
+   Contoh:
+   sql
+   Copy code
+   BEGIN;
+   INSERT INTO nama_tabel (kolom1, kolom2) VALUES (nilai1, nilai2);
+   UPDATE nama_tabel SET kolom = nilai WHERE kondisi;
+   COMMIT;
+   Select Specific Columns:
+
+   ** Pilih kolom-kolom yang benar-benar diperlukan untuk mengurangi beban I/O.
+   Contoh: SELECT kolom1, kolom2 FROM nama_tabel;
+   Join Optimization:
+
+   ** Pastikan indeks telah diaplikasikan pada kolom yang digunakan dalam operasi JOIN.
+   Contoh: SELECT * FROM tabel1 JOIN tabel2 ON tabel1.kolom = tabel2.kolom;
+   Menggunakan EXPLAIN:
+
+   ** Gunakan perintah EXPLAIN untuk menganalisis bagaimana SQLite mengeksekusi kueri Anda.
+   Contoh: EXPLAIN SELECT * FROM nama_tabel WHERE kolom = nilai;
+   Menghindari Subquery yang Berlebihan:
+
+   ** Gantikan subquery dengan JOIN atau UNION jika memungkinkan.
+   Contoh:
+   sql
+   Copy code
+   SELECT kolom1, kolom2 FROM tabel1 WHERE kolom IN (SELECT kolom FROM tabel2 WHERE kondisi);
+   
+   ** Menggunakan GROUP BY dengan Bijaksana:
+
+   Pastikan GROUP BY hanya digunakan saat diperlukan dan hati-hati dengan performa pada operasi agregasi.
+   Contoh: SELECT kolom, COUNT(*) FROM nama_tabel GROUP BY kolom;
+   
+   **Menghindari DISTINCT:
+
+   Hindari penggunaan DISTINCT jika tidak diperlukan.
+   Contoh: SELECT DISTINCT kolom FROM nama_tabel;
+   Memantau Penggunaan Indeks (Monitor Index Usage):
+
+   ** Gunakan perintah ANALYZE untuk memantau penggunaan indeks pada database Anda.
+   Ingatlah bahwa optimasi SQL harus dilakukan berdasarkan profil aplikasi dan jenis kueri yang sering dieksekusi. Lakukan pengujian dan analisis kinerja setelah melakukan optimasi untuk memastikan hasil yang diharapkan tercapai. Selain itu, pastikan untuk selalu melakukan backup data sebelum melakukan perubahan pada struktur tabel atau indeks untuk menghindari kehilangan data penting.
+
+27. Visualisasi Data
+
